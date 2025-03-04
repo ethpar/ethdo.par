@@ -1,4 +1,4 @@
-module github.com/wealdtech/ethdo
+module github.com/ethpar/ethdo.par
 
 go 1.22.7
 
