@@ -1,4 +1,4 @@
-// Copyright © 2019-2021 Weald Technology Limited.
+// Copyright 2019-2021 Weald Technology Limited.
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
@@ -48,11 +48,11 @@ func process(data *dataIn) ([]*dataOut, error) {
 	}
 	switch data.compounding {
 	case false:
-		if data.amount > 32000000000 {
+		if data.amount > 8192000000000 {
 			return nil, errors.New("deposit value exceeds maximum for a non-compounding validator")
 		}
 	case true:
-		if data.amount > 2048000000000 {
+		if data.amount > 8192000000000 {
 			return nil, errors.New("deposit value exceeds maximum for a compounding validator")
 		}
 	}
